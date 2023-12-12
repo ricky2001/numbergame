@@ -121,6 +121,7 @@ const App = () => {
         confirmButtonColor: "#B82000"
         });
         setName('');
+        setTimer(0);
       }
     }
   };
