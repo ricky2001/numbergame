@@ -1,24 +1,24 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
 .App {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  font-family: 'Roboto', sans-serif;
-  background-color: #f8f8f8; 
+  min-height: 100vh;
+  background-color: #f2f2f2;
+  border-radius: 15px;
   padding: 20px;
   text-align: center;
-}
-
-body {
-  font-family: 'Roboto', sans-serif; 
 }
 
 label {
   display: block;
   margin-bottom: 10px;
-  margin-right: 10px;
-  color: #333; 
+  color: #333;
 }
 
 input {
@@ -32,7 +32,7 @@ input {
 
 button {
   margin-top: 10px;
-  padding: 12px 20px;
+  padding: 12px;
   font-size: 16px;
   cursor: pointer;
   background-color: #4caf50;
@@ -44,30 +44,30 @@ button {
 }
 
 button:hover {
-  background-color: #45a049; 
+  background-color: #45a049;
 }
 
 button.clear-records {
-  background-color: #c92302; 
-  color: #fff; 
+  background-color: #c92302;
+  color: #fff;
   border: none;
   border-radius: 5px;
-  padding: 12px 20px;
+  padding: 12px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 button.clear-records:hover {
-  background-color: #B82000; 
+  background-color: #B82000;
 }
 
 .board {
   display: grid;
-  grid-template-columns: repeat(4, 70px); 
-  grid-gap: 5px; 
+  grid-template-columns: repeat(4, 70px);
+  grid-gap: 5px;
   margin-bottom: 20px;
-  background-color: #fff; 
-  border: 2px solid #ccc; 
+  background-color: #ffffff;
+  border: 2px solid #ddd;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -81,7 +81,7 @@ button.clear-records:hover {
   border: 1px solid #ccc;
   cursor: pointer;
   font-size: 18px;
-  transition: background-color 0.3s; 
+  transition: background-color 0.3s;
 }
 
 .board > div:hover {
@@ -100,36 +100,21 @@ button.clear-records:hover {
   content: attr(data-index);
 }
 
-.swal2-popup {
-  background-color: #fff;
+ul {
+  list-style: none;
+  background-color: #ffffff;
+  border: 2px solid #ddd;
   border-radius: 10px;
-  font-family: 'Roboto', sans-serif;
+  padding: 15px;
 }
 
-.swal2-title {
-  color: #333;
-  font-size: 24px;
-}
-
-.swal2-content {
-  color: #555;
+li {
+  margin-bottom: 10px;
   font-size: 16px;
-}
-
-.swal2-confirm-button {
-  background-color: #4caf50;
-  color: #fff;
-  border-radius: 5px;
-  padding: 12px 20px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.swal2-confirm-button:hover {
-  background-color: #45a049;
 }
 
 h2 {
   margin-top: 20px;
-  font-size: 24px; 
+  font-size: 24px;
+  color: #333;
 }
