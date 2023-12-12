@@ -120,7 +120,7 @@ const App = () => {
           confirmButtonText: "Close",
         confirmButtonColor: "#B82000"
         });
-        
+        setName('');
       }
     }
   };
@@ -129,6 +129,11 @@ const App = () => {
     const newRecords = [...records, { name, time: timer }];
     setRecords(newRecords);
     localStorage.setItem(RECORDS_STORAGE_KEY, JSON.stringify(newRecords));
+  };
+
+  const handleClearRecords = () => {
+    setRecords([]);
+    localStorage.removeItem(RECORDS_STORAGE_KEY);
   };
 
   return (
@@ -152,18 +157,19 @@ const App = () => {
           </div>
           <div>
             <p>Timer: {timer}s</p>
-            <button onClick={() => setRunning(false)+setName('')}>End Game</button>
+            <button onClick={() => setRunning(false)+setName('')+setTimer(0)}>End Game</button>
           </div>
         </div>
       )}
 
-      <div>
-        <h2>Records</h2>
+      <div><br/>
+        <h2>Ranking</h2>
         <ul>
+          
           {records.map((record, index) => (
-            <li key={index}>{`${record.name}: ${record.time}s`}</li>
+             <li key={index}>{`NO.${index + 1}. ${record.name}: ${record.time}s`}</li>
           ))}
-        </ul>
+        </ul><button className="clear-records" onClick={handleClearRecords}>Clear Records</button>
       </div>
     </div>
   );
